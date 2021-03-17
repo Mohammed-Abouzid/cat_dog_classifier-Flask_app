@@ -1,0 +1,39 @@
+
+{% extends "bootstrap/base.html" %}
+{% block content %}
+<div class="container">
+  <div class="jumbotron" style="background-color:#1daeff !important;">
+    <h2 style="color:#fff;">Cat/Dog Classifier</h2>
+    <p style="color:#fff;">Using Machine Learning to Classify Cats and Dogs</p>
+  </div>
+  <p></p>
+</div>
+<div class="card text-center">
+  <div class="card-header">
+    
+  </div>
+  <div class="card-body" style="background-color:#1daeff;">
+    <h5 class="card-title"></h5>
+    <hr/>
+    <p class="card-text"><div class="alert alert-danger" role="alert">
+  The predicted animal
+</div></p>
+<!-- Main ML Prediction Display Here -->
+    {% if prediction ==  0 %}
+    <p class="card-text"><div class="alert alert-danger" role="alert">
+  &#128071;   &#128071;      is      &#128071;  &#128071;
+</div></p>
+    <a href="#" class="btn btn-danger">Cat</a>
+     {% elif prediction == 1 %}
+        <p class="card-text"><div class="alert alert-danger" role="alert">
+  &#128071;   &#128071;      is      &#128071;  &#128071;
+</div></p>
+    <a href="#" class="btn btn-primary">Dog</a>
+    {% endif%}
+  </div>
+<!-- Main ML Prediction Display Ends Here -->
+  <div class="card-footer text-muted">
+  </div>
+</div>
+
+{% endblock %}

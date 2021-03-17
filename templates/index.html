@@ -1,0 +1,37 @@
+{% extends "bootstrap/base.html" %}
+{% block content %}
+
+<div class="container">
+  <div class="jumbotron" style="background-color:#1daeff !important;">
+    <h2 style="color:#fff;">Cat/Dog Classifier</h2>
+    <p style="color:#fff;">Using Machine Learning to Classify Cats and Dogs</p>
+  </div>
+  <p></p>
+</div>
+
+
+<div class="panel-group">
+    <div class="panel panel-primary">
+      <div class="panel-heading" style="background-color:#1563ff ">Please upload cat or dog photo, then press predict &#128512; </div>
+      <div class="panel-body">
+
+<!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict')}}" method="POST">
+                        <input type="file" id="namequery" name="namequery">
+                        <button type="submit" class="btn btn-primary">Predict</button>
+                        </form>
+
+<!-- Main Input For Receiving Query to our ML -->
+
+
+      </div>
+    </div>
+
+
+{% endblock %}
+
+{% block styles %}
+{{super()}} <!-- Allows Javascripts and other styles to be inclusive in bootstrap -->
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='css/styles.css')}}">
+{% endblock %}
