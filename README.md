@@ -3,4 +3,4 @@ cat_dog_classifier web app using flask
 
 
 <p align="center">
-  <img src="0.jpg" width="350"/>
+  <img src="0.jpg" width="450"/>
